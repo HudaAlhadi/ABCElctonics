@@ -1,0 +1,45 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(11, 11, 11, 0.75);
+}
+
+.modal {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgb(246, 237, 237);
+    padding: 2rem;
+    width: 30%;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+
+
+}
+
+@media (max-width: 780px) {
+    .modal {
+        width: 50%;
+
+    }
+}
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

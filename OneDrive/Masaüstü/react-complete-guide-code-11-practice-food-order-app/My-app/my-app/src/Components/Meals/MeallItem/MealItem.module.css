@@ -1,0 +1,27 @@
+.meal {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    padding-bottom: 1rem;
+    column-gap: 5rem;
+    color: aliceblue;
+    border: none;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.meal h3 {
+    margin: 0 0 0.25rem 0;
+
+
+}
+
+.description {
+    font-style: italic;
+}
+
+.cart-item {
+
+
+    background-color: rgb(255, 0, 212);
+}
