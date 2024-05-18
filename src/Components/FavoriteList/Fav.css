@@ -1,0 +1,12 @@
+.Favorite{
+margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.fav-title{
+
+    font-size:18px ;
+  
+}

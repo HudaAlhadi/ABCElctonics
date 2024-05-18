@@ -1,0 +1,221 @@
+.header {
+
+    background-color: #8a2b06;
+    color: white;
+    display: flex;
+justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  
+}
+
+.logocontainer h1{
+  color:#539ae6; ;
+}
+
+.container {
+    display: flex;
+align-items: center;
+width: 100%;
+
+}
+.logocontainer{
+    display: flex;
+height: 70px;
+justify-content: space-between;
+    align-items: center;
+}
+.logocontainer img{
+display: none;
+
+ 
+   
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+margin-left: 1rem;
+  
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+margin: 0 1rem;
+    color: aliceblue;
+    font-weight: 100px;
+}
+.searchBar{
+    justify-content: center;
+    display: flex;
+    margin-left: 1rem;
+}
+.searchBar input{
+    padding: 0.2rem 4rem;
+    border-color: transparent;
+    background-color: rgb(220, 208, 194);
+   outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+ justify-content: center;
+ background-color: #0f0e0d;
+ padding: 0.3rem 0.8rem;
+ 
+}
+nav li {
+    padding: 0.5rem 0.8rem; /* Reserve space for padding */
+
+  }
+  
+  nav li:hover {
+    color: black;
+    background-color: gray;
+    border-radius: 20px;
+    transition: all 0.4ms;
+  }
+  
+.account, .accountIcon, .hamIcon{
+font-size: 25px;
+display: flex;
+}
+.hamIcon{
+    display: none;
+}
+.cart{
+ margin-left: 7rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.dropdown{
+  position: absolute;
+  top: 8rem;
+  background-color: gray;
+  width: 340px;
+  z-index: 999;
+
+}
+.logoutButton{
+    font: inherit;
+    cursor: pointer; 
+    background-color: #8a2b06;
+    border: 1px solid #8a2b06;
+    color: white;
+    border-radius: 3px;
+}
+
+.accountContainer{
+align-items: center;
+display: flex;
+margin: 0;
+
+}
+.dropdown{
+    background-color: #08068a;
+}
+
+.OverlayMenu{
+    position: absolute;
+    top: 0;
+    background-color:#8a2b06;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    height: 80%;
+    width: 100%;
+    color:black;
+    flex-direction: column;
+    z-index: 999;
+    overflow: hidden;
+    transition: right 0.5s;
+
+}
+@media (max-width: 1422px) {
+    nav {
+        display: none;
+    }
+    .accountContainer{
+        align-items: center;
+        display: flex; 
+        }
+}
+
+@media (max-width: 1148px) {
+    nav {
+        display: none;
+    }
+    .container {
+ justify-content: center;
+    
+    }
+    .searchBar{ display: none;}
+    .header{
+        justify-content: space-between; 
+      }
+}
+
+
+@media (max-width: 788px) {
+
+      .header{
+        justify-content: space-between;
+      }
+    
+    nav , .searchBar , .account, .accountIcon, .loggedInContainer{
+display: none;
+    }
+    .cart {
+        margin-left: 1rem; 
+        padding: 0;
+      }
+     
+
+.hamIcon{
+    display: block
+   
+}
+.logocontainer{
+    margin-left: 1rem;
+  
+}
+.logocontainer img{
+    display: block;
+    object-fit: contain;
+width: 100%;
+ height: 200px}
+
+.logocontainer h1{
+    display: none;
+}
+}
+@keyframes slideIn {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 80vh;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        height: 80vh;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+
+.OverlayMenu{
+    animation: slideIn 0.5s ease forwards; /* Slide in animation */
+}

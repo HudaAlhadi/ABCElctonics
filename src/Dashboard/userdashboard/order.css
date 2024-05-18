@@ -1,0 +1,11 @@
+.orders{
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    border: 1px solid #539ae6;
+    padding: 1rem ;
+    color: black;
+}
+.order-container{
+    display: flex;
+    gap: 1rem;
+}

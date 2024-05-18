@@ -1,0 +1,79 @@
+.meal {
+  display: flex;
+text-align: center;
+align-items: center;
+flex-direction: column;
+
+
+
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+}
+.meal > div {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+ 
+ 
+}
+.meal:hover{
+
+  box-shadow: 0px 0px 8px rgb(130, 14, 14);
+}
+img {
+  width: 80%;
+ align-self: center;
+  height: 200px; 
+  margin-top: 1rem;
+  overflow: hidden
+}
+
+.meal h3 {
+  margin: 0.5rem 0;
+
+  font-size: smaller;
+}
+
+.description {
+  font-style: italic;
+  font-size: smaller;
+}
+
+.price {
+  margin-top: 1rem;
+  font-weight: bold;
+  color:rgb(38, 55, 12);
+  font-size: 1.25rem;
+}
+
+.button {
+  cursor: pointer;
+  font: inherit;
+font-weight: 900;
+  border: 1px solid rgb(130, 14, 14);
+  background-color: white;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  color: rgb(100, 23, 23);
+border-radius: 3px;
+  padding: 0.3rem 2rem;
+  max-width: 100%;
+}
+.reviews{
+  color: rgb(38, 55, 12)
+}
+.button:hover,
+.button:active {
+  background-color: #8a2b06;
+  color: white;
+  transition: all 0.5s;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,24 @@
+.card {
+  border: 1px solid rgb(195, 38, 38);
+  position: relative;
+  max-width: 90%;
+}
+
+.container {
+  gap: 2rem;
+  display: grid;
+  border: 1px solid transparent;
+  border-right: none;
+  border-radius: 5px;
+  position: absolute;
+  width: 30px;
+  top: 10%;
+  right: -50px; /* Shifted off screen initially */
+  transition: right 0.5s ease; /* Transition for smooth movement */
+  visibility: hidden;
+}
+
+.card:hover .container {
+  right: 2px; /* Shift back to the desired position on hover */
+  visibility: visible;
+}

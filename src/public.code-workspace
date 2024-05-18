@@ -1,0 +1,23 @@
+{
+  "folders": [
+	{
+		"name": "public",
+		"path": "../../public"
+	},
+	{
+		"name": "node_modules-old",
+		"path": "../../node_modules-old"
+	},
+	{
+		"name": "server",
+		"path": "../../server"
+	},
+	{
+		"name": "node_modules",
+		"path": "../../node_modules"
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
+}

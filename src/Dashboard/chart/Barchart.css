@@ -1,0 +1,14 @@
+.barchart{
+
+    background-color:  #ffffff;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    align-items: center;
+    display: flex;
+  flex-direction: column;
+}
+.barchart h2{
+    color: black;
+}

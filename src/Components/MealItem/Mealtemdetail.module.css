@@ -1,0 +1,120 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  width: 90%;
+  margin: 4rem 2rem;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  color: #0c0401;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 2rem; 
+  margin-bottom: 8rem;
+}
+
+.image img {
+  display: block; 
+  max-width: 100%; 
+  border: none; 
+  height: auto; 
+  margin: 0 auto;
+  background-color: transparent; 
+}
+
+.actions .Add {
+  background-color: #8a2b06;
+  border: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.quantities {
+  display: flex;
+  align-items: center;
+}
+
+.quantities h3 {
+  font-size: 17px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  margin-left: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+ 
+  border-radius: 4px;
+}
+
+.ItemAmount {
+  padding: 0 8px;
+}
+
+.details {
+  font-size: 17px;
+}
+
+.minus, .plus {
+  padding: 2px 8px;
+
+}
+
+.minus {
+  border-right: 1px solid black;
+}
+
+.plus {
+  border-left: 1px solid black;
+}
+
+.price {
+  color: #b53e0f;
+  font-size: 30px;
+  margin: 1rem 0rem;
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+.search {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+@media (max-width: 764px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .image img {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .quantity {
+    min-width: 100px;
+    padding: 4px;
+  }
+
+  .minus, .plus {
+    padding: 2px 12px;
+  }
+}

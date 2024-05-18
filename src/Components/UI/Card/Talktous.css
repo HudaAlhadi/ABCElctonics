@@ -1,0 +1,34 @@
+
+
+
+.talktous{
+    background-color: aquamarine;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 1rem;
+}
+.talktous h1{
+    color: aliceblue;
+}
+.contactbutton{
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    border: 1px solid rgb(130, 14, 14);
+    background-color: rgb(100, 23, 23);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    color: white;
+    border-radius: 4px;
+    padding: 0.8rem 2.5rem;
+}
+@media (max-width: 670px) {
+
+    .talktous p{
+    
+     margin-left: 1rem;
+     text-align: center;
+    }
+  }
+  

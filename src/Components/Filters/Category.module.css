@@ -1,0 +1,185 @@
+
+
+.clear {
+
+
+    padding: 0.6rem 0.1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: brown;
+    color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
+
+.meals{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  gap: 0.5rem;
+
+}
+.meals img{
+    width: 100%;
+
+}
+
+.wrapper{
+    display: flex;
+   align-items: center;
+  margin: 0 auto;
+   justify-content:center;
+   color: black;
+ margin-bottom: 2rem;
+ width: 90% ;
+
+
+
+  
+}
+.shopping img{
+    max-width: 100%;
+    object-fit: cover;
+  height:auto
+
+   
+    
+    }
+.hero{
+
+   margin-top: 2rem;
+   display: grid;
+   margin: 0 auto;
+   width: 90%;
+}
+ .shopping{
+
+ background-color: rgb(202, 193, 193);
+  border-radius: 10px;
+  margin: 3rem 2rem;
+  padding: 5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+.shopping h1{
+margin-left: 5rem;
+margin-bottom: 1rem;
+}
+.shopping span{
+    color: white;
+    font-weight: 1000;
+    
+    font-size: 100px;
+}
+.shopping .red{
+    color: brown;
+}
+
+.wrapper button{
+    cursor: pointer;
+    font: inherit;
+  font-weight: 600;
+    border: 1px solid transparent;
+ 
+   margin-left: 1rem;
+   margin-top: 2rem;
+   color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 8px;
+
+}
+.categories{
+  max-width: 100%;
+  display:flex;
+  margin: 0 auto;
+  
+  align-items: center;
+}
+.filter{
+color: black;
+}
+.wrapper button span{
+ margin-right: 0.5rem;
+ color: brown;
+}
+
+.women {
+    background-color: rgb(188, 195, 227) !important;
+   
+  }
+  .men{
+    background-color: rgb(196, 151, 135);
+  }
+  .jewelery{
+    background-color: palevioletred;
+  }
+  .electronics{
+background-color: rgb(220, 175, 116);
+  }
+  .all{
+    background-color: rgb(146, 117, 96);
+  }
+
+  @media (max-width: 1400px) {
+    .meals{
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        max-width: 100%;
+    }
+    .categories{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 960px) {
+  .meals{
+      grid-template-columns: 1fr  1fr 1fr;
+      max-width: 100%;
+  }
+  .categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+}
+
+@media (max-width: 670px) {
+  .meals{
+      grid-template-columns: 1fr  1fr;
+      max-width: 100%;
+   
+      margin: 0 auto;
+
+  }
+  .categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+
+
+  }
+  
+.wrapper button{
+  padding: 1rem 2rem;
+
+}
+ 
+}
+@media (max-width: 670px) {
+  .meals{
+      grid-template-columns: 1fr  1fr;
+      max-width: 100%;
+   
+      margin: 0 auto;
+
+  }
+.shopping h1{
+  margin-left: 1rem;
+  font-size: 20px;
+}
+.shopping span{
+  font-size: 90px;
+}
+}

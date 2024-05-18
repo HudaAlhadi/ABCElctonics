@@ -1,0 +1,30 @@
+.chart {
+  color: #ffffff; 
+     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 1rem;
+    color: gray;
+    .chartGrid {
+      stroke: rgb(228, 225, 225);
+      color: rgb(81, 255, 0);
+   
+    }
+  }
+  
+  .hero{
+    background-color:  #ffffff;
+    border-radius: 5px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    margin-top: 3rem;
+  }
+  .sales{
+    color: black;
+    margin-bottom: 20px;
+    margin-left: 1rem;
+
+  }
+ 
