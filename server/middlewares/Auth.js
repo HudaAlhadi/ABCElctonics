@@ -1,31 +1,38 @@
+import { ConstructionOutlined } from '@mui/icons-material';
 import jwt from 'jsonwebtoken';
+import { usermodel } from '../Models/usermodel';
 
 export const authenticateToken = (req, res, next) => {
 
     const authHeader = req.headers['authorization'];
-    
+
     const token = authHeader && authHeader.split(' ')[1];
-    console.log(token)
+
     if (token === null) { 
-      return res.sendStatus(401); // No token provided
-    }
-  
+      return res.sendStatus(401); 
+    }  
+                                                
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
       if (err) {
+       
         return res.sendStatus(403); // Token verification failed
       }
-      req.user = user; 
-  
-      next(); 
-    });}
+      req.message = "User authenticated successfully!";
+      
+      req.user = user;  
+      console.log(user)
+      next() ;  
+      
+    });}  
 
-export const authrole = (roles) => (req, res, next) => {
-    const userRole = req.user.role;
-   
-    if (roles.includes(userRole)) {
-        next();
-    } else {
-        return res.status(403).send('Forbidden'); // User role not authorized
-    
-}; }
+export const authrole = () => (req, res, next) => {
+  if ( req.user.role === 'admin') {
+    console.log(req.user.role)
+    next();
+} else {
+    res.status(200).send('Forbidden'); 
+}
+};
+
+ 
   
