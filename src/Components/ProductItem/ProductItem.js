@@ -9,11 +9,11 @@ import Rating from '../UI/Rating/Rating.js';
 
 const ProductItem = (props) => {
 
-    const ctx = useContext(CartContext);
+    const cart= useContext(CartContext);
    const fav= useContext(FavContext)
    
   const Addfunction = (amount) => {
-        ctx.addItem({
+       cart.addItem({
             id: props.id,
             title: props.title,
             price: props.price,
@@ -40,14 +40,12 @@ const ProductItem = (props) => {
                     <div> 
                     <img src={props.img} alt={props.name} /></div>
                     <h3>{props.title}</h3>  
-                    <div className={classes.price}>{props.price}</div>
+                    <div className={classes.price}>{props.price}$</div>
                 <Link to={`/meals/${props.title}`}>
                 <span className={classes.reviews}> Reviews: {props.reviews}</span>
                     <Rating rating={props.rating}/> 
                         <button className={classes.button}>View details</button>
                     </Link></div>
-        
-        
         </Card>
     );
   };

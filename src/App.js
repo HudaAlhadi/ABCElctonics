@@ -6,7 +6,6 @@ import { FavProvider } from './Store/FavProvider.js';
 import Cart from './Components/Cart/Cart';
 import CartProvider from './Store/CartProvider';
 import Footer from './Components/UI/Footer/Footer';
-import Nav from './Components/Navbar/Nav';
 import ContactForm from './Components/Forms/Form.js';
 import Categories from './Pages/Filters/Catogries.js/Category.js';
 import { useEffect } from 'react';

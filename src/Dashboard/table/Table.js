@@ -13,7 +13,7 @@ import Loading from "../../Components/UI/Card/Loading";
 
 const List = () => {
 const {orders, getorders, isLoading}= useContext(OrderContext)
-console.log(orders)
+
   useEffect(()=>{
     getorders()
   },[])
@@ -22,7 +22,7 @@ console.log(orders)
   const rows = orders?.map((order)=>{ 
     return {id:order._id, user: order.user, product: order.product, quantity:order.quantity, date: order.createdAt}
   } )
-console.log(rows)
+
 
  
   return (

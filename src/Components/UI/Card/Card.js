@@ -11,7 +11,7 @@ const Card = (props) => {
      const [cart, setcart]= useState(1)
      const[fav, setfav] = useState(false)
 
-const ctx= useContext(FavContext)
+
 
      const Handle = (e) => {
         e.preventDefault()

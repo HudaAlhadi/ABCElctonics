@@ -21,7 +21,7 @@ image:image
         })
 
        
-        console.log(res)} 
+       } 
         
         catch(err){
             console.err(err)

@@ -9,6 +9,7 @@ import React from 'react';
 
 const Fav=()=>{
     const fav = useContext(FavContext)
+
 const favoriteProducts= fav.items.map((item)=>{
     return    <ProductItem category={item.category} id={item.id} title={item.title} price={item.price} desc={item.description} img={item.img} rating={item.rating}></ProductItem>
 })
@@ -16,7 +17,6 @@ const favoriteProducts= fav.items.map((item)=>{
     return (
 
         <>
-     
         <h1> Favorite Products</h1>
         {favoriteProducts.length===0 &&<div className='fav-title'>  No Items <FaExclamation /></div> }
         <div className='Favorite'> 

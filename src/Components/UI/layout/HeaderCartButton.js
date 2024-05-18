@@ -8,11 +8,8 @@ import { Link } from 'react-router-dom';
 
 
 const HeaderCartButton = (props) => {
-
-    const cartCtx = useContext(CartContext);
-    console.log(cartCtx)
-
-    const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    const cart= useContext(CartContext);
+    const numberOfCartItems = cart.items.reduce((curNumber, item) => {
         return curNumber + item.amount;
     }, 0);
 

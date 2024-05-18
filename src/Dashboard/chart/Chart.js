@@ -15,7 +15,7 @@ import ProductContext from "../../Store/productcontext";
 
 const Chart = () => {
   const { fetchproducts , products} = useContext(ProductContext);
-  console.log(products)
+
 useEffect(()=>{
   fetchproducts()
 },[])
@@ -25,7 +25,7 @@ const stats = products.map(({ stats }) => {
   return stats?.monthlyData;
 });
 
-console.log(stats)
+
 
   return (
 <> 

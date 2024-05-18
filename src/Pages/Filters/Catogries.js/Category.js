@@ -41,7 +41,7 @@ function Categories(props) {
     console.log(filteredItems)
     setProduct(filteredItems);
   };
-console.log(productlist)
+
   const allproducts = productlist?.map((item) => {
     return (
       <ProductItem

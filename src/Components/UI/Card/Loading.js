@@ -9,7 +9,6 @@ const Loading = () => {
     return (
 <> 
 <div class={classes.container}>
-
         <span class={classes.loader}></span>
         </div>
         </>

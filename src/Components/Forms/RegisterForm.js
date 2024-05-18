@@ -24,7 +24,7 @@ const RegisterForm = () => {
                 },
                 body: JSON.stringify({ username: username, password: Password, email: Email })
             });
-            console.log(res)
+            
             
             console.log(await res.json())
             if(res.status===200){

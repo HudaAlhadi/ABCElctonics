@@ -6,9 +6,9 @@ import { HiMiniShoppingBag } from "react-icons/hi2";
 import { useContext } from 'react';
 const HeaderCartButton = (props) => {
 
-    const cartCtx = useContext(CartContext);
+    const cart = useContext(CartContext);
 
-    const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    const numberOfCartItems = cart.items.reduce((curNumber, item) => {
         return curNumber + item.amount;
     }, 0);
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './filter.module.css'
 const ProductFilter = (props) => {
   const { products } = props;
-  const [sortOption, setSortOption] = useState('nameLowToHigh'); // Default sorting by name, low to high
+  const [sortOption, setSortOption] = useState('nameLowToHigh'); 
 
   const filterProducts = (sortOption) => {
     // Sorting
@@ -24,8 +24,7 @@ const ProductFilter = (props) => {
     const selectedSortOption = event.target.value;
     setSortOption(selectedSortOption);
     const filteredProducts = filterProducts(selectedSortOption);
-    // You might want to pass the filtered products to another function or component to update the UI
-    console.log(filteredProducts);
+    
     props.onFilter(filteredProducts)
   };
 

@@ -13,8 +13,7 @@ const LoginForm = () => {
     const [email, setEmail] = useState('');
     const { loginState, login, failedlogin, users } = useContext(AuthContext);
   
-console.log(failedlogin)
-  console.log(users.role)
+
   const handleLogin =  (e) => {
     e.preventDefault();
   login(email, password);
@@ -27,7 +26,7 @@ console.log(failedlogin)
     }
   }, [loginState, users, navigate]);
 
-  console.log(failedlogin)
+
     return (
         <> 
             <form>

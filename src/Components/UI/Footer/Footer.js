@@ -38,10 +38,8 @@ const Footer = () => {
                             <Link to='/about'> <li> Customer Service </li> </Link>
                             <Link to='/contact'> <li>Email Us</li> </Link>
                             <Link to='/contact'> <li> Call us </li> </Link>
-                          
-                            
+                     
                         </ul>
-             
                     </div>
                     <div class={classes.list}>
                         <ul>
