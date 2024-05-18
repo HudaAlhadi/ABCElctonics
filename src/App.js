@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Routes, Route, Form} from 'react-router-dom';
 import Loading from './Components/UI/Card/Loading.js';
 import Header from './Components/layout/Header';
 import { FavProvider } from './Store/FavProvider.js';
-import Cartt from './Components/Cart/Cartt';
+import Cart from './Components/Cart/Cart';
 import CartProvider from './Store/CartProvider';
 import Footer from './Components/UI/Footer/Footer';
 import Nav from './Components/Navbar/Nav';
 import ContactForm from './Components/Forms/Form.js';
-import Categories from './Components/Filters/Category.js';
+import Categories from './Pages/Filters/Catogries.js/Category.js';
 import { useEffect } from 'react';
 import LoginForm  from './Components/Forms/LoginForm.js'
 import Modal from './Components/UI/Modal';
-import Mealtemdetail from './Components/MealItem/Mealtemdetail';
+import ProductItemdetail from './Components/ProductItem/ProductItemdetail.js';
 import TopBar from './Components/UI/layout/TopBar';
 import StripeContainer from './Components/Forms/StripeContainer.js';
 import NotFound from './Components/Notfound/Notfound.js';
@@ -28,7 +28,7 @@ import Home from './Dashboard/pages/home/home,.js';
 import Login from './Dashboard/pages/login/login.js';
 import List from './Dashboard/table/Table.js';
 import Single from './Dashboard/pages/single/single.js';
-import About from './Components/Filters/About/About.js';
+import About from '../src/Pages/Filters/About/About.js';
 import UserProvider from './Store/userprovider.js';
 import Products from './Dashboard/pages/products/products.js';
 import { useContext } from 'react';
@@ -61,13 +61,13 @@ console.log(isloading)
         <OrderProvider> 
           <TopBar />
           <Header products= {products} onShow={ShowModal} />
-          {Isshow && <Cartt onHide={HideModal} />}
+          {Isshow && <Cart onHide={HideModal} />}
           <Elements stripe={stripePromise}>
             <Routes>
               <Route path='/account/myorders' element={ <Account> </Account>} />
               <Route path="/" element={<Categories />} />
               <Route path="/checkout" element={<CheckoutForm />} />
-              <Route path="/meals/:productId" element={<Mealtemdetail products={products} />} />
+              <Route path="/meals/:productId" element={<ProductItemdetail products={products} />} />
               <Route path="/user/register" element={<RegisterForm />} />
               <Route path="/contact" element={<ContactForm />} />
               <Route path="/login" element={<LoginForm />} />

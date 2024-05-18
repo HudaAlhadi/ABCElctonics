@@ -1,6 +1,6 @@
 import { ConstructionOutlined } from '@mui/icons-material';
 import jwt from 'jsonwebtoken';
-import { usermodel } from '../Models/usermodel';
+
 
 export const authenticateToken = (req, res, next) => {
 
@@ -10,7 +10,7 @@ export const authenticateToken = (req, res, next) => {
 
     if (token === null) { 
       return res.sendStatus(401); 
-    }  
+    }   
                                                 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
       if (err) {

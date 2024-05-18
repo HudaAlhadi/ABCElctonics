@@ -1,16 +1,18 @@
-import MealItem from '../MealItem/MealItem.js';
+import ProductItem from '../../../Components/ProductItem/ProductItem.js';
 import classes from './Category.module.css';
 import React, { useState, useEffect, useContext } from 'react';
-import shopping from '../../Assets/org.png';
+import shopping from '../../../Assets/org.png';
 import { FaCamera } from 'react-icons/fa';
 import { GiClothes } from 'react-icons/gi';
 import { GiPowerRing } from 'react-icons/gi';
 import { IoWomanOutline } from 'react-icons/io5';
-import ProductFilter from './ProductFilter.js';
-import ProductContext from '../../Store/productcontext.js';
+import ProductFilter from '../ProductFilter.js';
+import ProductContext from '../../../Store/productcontext.js';
 import { useCallback} from 'react';
-import Talktous from '../UI/Card/Talktous.js';
-import Loading from '../UI/Card/Loading.js';
+import Talktous from '../../../Components/UI/Card/Talktous.js';
+import Loading from '../../../Components/UI/Card/Loading.js';
+
+
 function Categories(props) {
   const { products, fetchproducts, isloading } = useContext(ProductContext);
   const [productlist, setProduct] = useState(products);
@@ -42,7 +44,7 @@ function Categories(props) {
 console.log(productlist)
   const allproducts = productlist?.map((item) => {
     return (
-      <MealItem
+      <ProductItem
         key={item.product._id} 
         category={item.product.category}
         id={item.product._id}

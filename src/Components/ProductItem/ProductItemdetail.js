@@ -1,16 +1,16 @@
 import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import classes from './Mealtemdetail.module.css';
+import classes from './ProductItemdetail.module.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import CartContext from '../../Store/Cart-context';
 import ProductContext from '../../Store/productcontext';
-import MealItem from './MealItem';
+import ProductItem from './ProductItem';
 import Rating from '../UI/Rating/Rating';
 
-const Mealtemdetail = (props) => {
+const ProductItemdetail = (props) => {
   const [like, setLike] = useState(true);
   const { items, decreaseAmount, increaseAmount, addItem } = useContext(CartContext);
   const { products } = useContext(ProductContext);
@@ -26,8 +26,8 @@ const Mealtemdetail = (props) => {
 
   const filtereditems = products?.filter((item) => item.product._id !== productItem.product._id);
   const Filteredproducts= filtereditems?.map((item)=>{
-    return <MealItem id={item.product._id} title={item.product.name} price={item.product.price} desc={item.product.description} img={item.product.images[0].url
-    } rating={item.product.ratings} review={item.product.reviews} saleCount={item.product.saleCount}></MealItem>
+    return <ProductItem id={item.product._id} title={item.product.name} price={item.product.price} desc={item.product.description} img={item.product.images[0].url
+    } rating={item.product.ratings} review={item.product.reviews} saleCount={item.product.saleCount}></ProductItem>
     
     })
 
@@ -104,4 +104,4 @@ const Mealtemdetail = (props) => {
   );
 };
 
-export default Mealtemdetail;
+export default ProductItemdetail;

@@ -1,13 +1,13 @@
-import classes from './MealItem.module.css';
+import classes from './ProductItem.module.css';
 import Card from '../UI/Card/Card.js';
 import { useContext } from 'react';
-import CartContext from '../../Store/Cart-context';
+import CartContext from '../../Store/Cart-context.js';
 import {Link } from 'react-router-dom';
 import FavContext from '../../Store/Fav-context.js';
 import { FaRegStar } from "react-icons/fa";
 import Rating from '../UI/Rating/Rating.js';
 
-const MealItem = (props) => {
+const ProductItem = (props) => {
 
     const ctx = useContext(CartContext);
    const fav= useContext(FavContext)
@@ -52,4 +52,4 @@ const MealItem = (props) => {
     );
   };
 
-export default MealItem;
+export default ProductItem;

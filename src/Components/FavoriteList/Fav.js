@@ -1,7 +1,7 @@
 
 import { useContext } from 'react';
 import FavContext from '../../Store/Fav-context';
-import MealItem from '../MealItem/MealItem';
+import ProductItem from '../ProductItem/ProductItem';
 import { FaExclamation } from "react-icons/fa6";
 import './Fav.css'
 import React from 'react';
@@ -10,7 +10,7 @@ import React from 'react';
 const Fav=()=>{
     const fav = useContext(FavContext)
 const favoriteProducts= fav.items.map((item)=>{
-    return    <MealItem category={item.category} id={item.id} title={item.title} price={item.price} desc={item.description} img={item.img} rating={item.rating}></MealItem>
+    return    <ProductItem category={item.category} id={item.id} title={item.title} price={item.price} desc={item.description} img={item.img} rating={item.rating}></ProductItem>
 })
 
     return (
