@@ -61,7 +61,7 @@ const orderreducer = (state, action) => {
 
 
         try{
-            const res= await fetch(`${backendURL}/orders`)
+            const res= await fetch(`${process.env.REACT_APP_BACKEND_URL}/orders`)
         
             const response= await res.json()
         
@@ -78,7 +78,7 @@ const orderreducer = (state, action) => {
       const getmyorders=async(id)=>{
     
         try{
-          const res= await fetch(`${backendURL}/orders/myorders/${id}`, {
+          const res= await fetch(`${process.env.REACT_APP_BACKEND_URL}/orders/myorders/${id}`, {
             headers:{'Authorization':`Bearer ${token}`, 'content-type': 'application/json'}
          
           })

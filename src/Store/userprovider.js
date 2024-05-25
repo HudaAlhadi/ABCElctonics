@@ -19,7 +19,7 @@ const UserProvider = (props) => {
 
   const fetchAllUsers = async () => {
     try {
-      const res = await fetch(`${backendURL}/user/getusers`);
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/user/getusers`);
       if (res.status === 200) {
         const response = await res.json();
         dispatch({ type: 'AllusersRequest', payload: response });

@@ -74,7 +74,7 @@ const AuthProvider = (props) => {
 
   const login = async (email, password) => {
     try {
-      const res = await fetch(`${backendURL}/user/login`, {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/user/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 'credentials': 'include',
