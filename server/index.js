@@ -71,7 +71,7 @@ console.log('Products deleted ')} catch(error){
 mongoose.connect("mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce");
 
 // Start the server
-const port = 3005; 
+const port = process.env.PORT|| 5000; 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
