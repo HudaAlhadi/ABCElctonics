@@ -9,7 +9,7 @@ const[image, setimage]= useState('')
 
 const createproduct= async()=>{
 try{ 
-    const res= await fetch('http://localhost:3005/products/Add', {
+    const res= await fetch(`${backendURL}/products/Add`, {
         method: 'post',
         headers:{ 'Content-Type': 'application/json'},
         body: JSON.stringify({

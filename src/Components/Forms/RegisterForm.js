@@ -3,10 +3,10 @@ import classes from './RegisterForm.module.css';
 import { Link } from "react-router-dom";
 import { AiOutlineWarning } from "react-icons/ai";
 
-
+import backendURL from './config.js';
 
 const RegisterForm = () => {
-
+    console.log(backendURL)
     const [username, setname]= useState('')
     const [Password, setpassword]= useState('')
     const [Email, setemail]= useState('')
@@ -17,7 +17,7 @@ const RegisterForm = () => {
         e.preventDefault();
  
         try {
-            const res = await fetch('http://localhost:3005/user/register', {
+            const res = await fetch(`${backendURL}/user/register`, {
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json' 

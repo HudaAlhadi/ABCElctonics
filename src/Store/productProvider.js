@@ -26,7 +26,7 @@ const ProductProvider= (props)=>{
 
   const fetchallproducts= async()=>{
    try{
-     const res= await fetch('http://localhost:3005/products/')
+     const res= await fetch(`${backendURL}/products/`)
  
     if(res.status===200){  
       const response= await res.json()

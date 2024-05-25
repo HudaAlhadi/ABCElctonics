@@ -61,7 +61,7 @@ const orderreducer = (state, action) => {
 
 
         try{
-            const res= await fetch('http://localhost:3005/orders')
+            const res= await fetch(`${backendURL}/orders`)
         
             const response= await res.json()
         
@@ -78,7 +78,7 @@ const orderreducer = (state, action) => {
       const getmyorders=async(id)=>{
     
         try{
-          const res= await fetch(`http://localhost:3005/orders/myorders/${id}`, {
+          const res= await fetch(`${backendURL}/orders/myorders/${id}`, {
             headers:{'Authorization':`Bearer ${token}`, 'content-type': 'application/json'}
          
           })
