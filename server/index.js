@@ -21,9 +21,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cookieParser());
-app.use(cors({
-   origin: 'http://localhost:3000' // Allow requests from this origin
-   }));
+app.use(cors());
    app.use('/orders', orderRoute)
 app.use('/user', route)  
 //app.use('/payment', route)  
