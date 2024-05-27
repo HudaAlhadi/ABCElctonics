@@ -25,6 +25,7 @@ const ProductProvider= (props)=>{
 
 
   const fetchallproducts= async()=>{
+    console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
    try{
      const res= await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/`)
  
