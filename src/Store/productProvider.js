@@ -26,16 +26,16 @@ const ProductProvider= (props)=>{
 
   const fetchallproducts= async()=>{
     console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
-   try{
-     const res= await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/`)
- 
-    if(res.status===200){  
-      const response= await res.json()
-      dispatch({type: 'AllProductrequest', payload:response})
-        }}
-        catch(error){
-    console.log(error)
-          }}
+    try {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/`);
+      if (!res.ok) {  // Check if response is not OK (not in the range 200-299)
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const response = await res.json();
+      dispatch({type: 'AllProductrequest', payload: response});
+    } catch (error) {
+      console.log('Fetch error: ', error);
+    }}
 
 const productContextValue = useMemo(() => ({
   products: productstate.products,
