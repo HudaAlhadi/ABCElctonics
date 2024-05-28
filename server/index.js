@@ -20,14 +20,13 @@ const app = express();
 // Body parser middleware (included in Express)
 app.use(express.json());
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://abcelectonics-43364e8a49cb.herokuapp.com');
   next();
 });
 // Use cookie parser middleware
 app.use(cookieParser());
 
 
-// Enable CORS for all routes (Alternative method)
 
 
 // MongoDB connection
