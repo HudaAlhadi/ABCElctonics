@@ -23,7 +23,7 @@ app.use(express.json());
 // Use cookie parser middleware
 app.use(cookieParser());
 
-const allowedOrigins = ['https://abcelectronics-43364e8a49cb.herokuapp.com', 'http://localhost:5000'];
+const allowedOrigins = ['https://abcelectronics-43364e8a49cb.herokuapp.com', 'http://localhost:3000'];
 app.use(cors({
   origin: (origin, callback) => {
   
@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
