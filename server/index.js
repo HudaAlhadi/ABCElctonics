@@ -11,9 +11,8 @@ import dotenv from 'dotenv';
 // Load environment variables from .env file
 dotenv.config();
 
-// Initialize Stripe with the secret key
-const Stripe_Key = 'sk_test_....jQb';
-const stripe = new Stripe(Stripe_Key);
+// Initialize Stripe with the secret key from environment variable
+const stripe = new Stripe(process.env.STRIPE_KEY);
 
 // Initialize Express app
 const app = express();
@@ -23,66 +22,34 @@ app.use(express.json());
 
 // Use cookie parser middleware
 app.use(cookieParser());
+
+// Use CORS middleware
 app.use(cors({
-  origin: '*', // Change this to your frontend's URL in production
+  origin: process.env.FRONTEND_URL, // Change this to your frontend's URL in production
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Enable CORS for all routes
-app.use((req, res, next) => { res.header({"Access-Control-Allow-Origin": "*"}); next(); })
+// Enable CORS for all routes (Alternative method)
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
 // MongoDB connection
-mongoose.connect("mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB connected...'))
-.catch(err => console.error('MongoDB  connection error:', err));
+.catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
 app.use('/orders', orderRoute);
 app.use('/user', route);
 app.use('/products', productRoute);
-
-// Function to insert products
-const insertProducts = async () => {
-  try {
-    await productModel.insertMany(products);
-    console.log('Products inserted successfully.');
-  } catch (error) {
-    console.error('Error inserting products:', error.message);
-  }
-};
-
-// Function to insert overall stats
-const insertstats = async () => {
-  try {
-    await OverallStat.insertMany(dataOverallStat);
-    console.log('Overall stats inserted successfully.');
-  } catch (error) {
-    console.error('Error inserting overall stats:', error.message);
-  }
-};
-
-// Function to insert users
-const insertUsers = async () => {
-  try {
-    await usermodel.insertMany(usersData);
-    console.log('Users inserted successfully.');
-  } catch (error) {
-    console.error('Error inserting users:', error.message);
-  }
-};
-
-// Function to delete products
-const deleteproducts = async () => {
-  try {
-    const result = await productModel.deleteMany({});
-    console.log('Products deleted successfully.');
-  } catch (error) {
-    console.error('Error deleting products:', error.message);
-  }
-};
 
 // Start the server
 const port = process.env.PORT || 5000;
