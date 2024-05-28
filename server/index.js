@@ -23,6 +23,11 @@ app.use(express.json());
 
 // Use cookie parser middleware
 app.use(cookieParser());
+app.use(cors({
+  origin: '*', // Change this to your frontend's URL in production
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Enable CORS for all routes
 app.use((req, res, next) => { res.header({"Access-Control-Allow-Origin": "*"}); next(); })
