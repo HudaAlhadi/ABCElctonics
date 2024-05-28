@@ -25,7 +25,7 @@ app.use(cookieParser());
 
 // Use CORS middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL, // Change this to your frontend's URL in production
+  origin: "*",
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
