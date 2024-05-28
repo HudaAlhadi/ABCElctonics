@@ -27,7 +27,7 @@ const ProductProvider= (props)=>{
   const fetchallproducts= async()=>{
     console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
     try {
-      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/`);
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/`, {  mode: 'no-cors'});
       if (!res.ok) {  // Check if response is not OK (not in the range 200-299)
         throw new Error(`HTTP error! status: ${res.status}`);
       }
