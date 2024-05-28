@@ -23,7 +23,7 @@ app.use(express.json());
 // Use cookie parser middleware
 app.use(cookieParser());
 
-const allowedOrigins = ['https://abcelectronics-43364e8a49cb.herokuapp.com', 'http://localhost:3000'];
+const allowedOrigins = ['https://abcelectonics-43364e8a49cb.herokuapp.com', 'http://localhost:3000'];
 app.use(cors({
   origin: (origin, callback) => {
   
