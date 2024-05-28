@@ -23,25 +23,11 @@ app.use(express.json());
 // Use cookie parser middleware
 app.use(cookieParser());
 
-const allowedOrigins = ['https://abcelectonics-43364e8a49cb.herokuapp.com', 'http://localhost:3000'];
-app.use(cors({
-  origin: (origin, callback) => {
-  
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true); // Allow the request
-    } else {
-      callback(new Error('Not allowed by CORS')); // Block the request
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers in requests
-}));
 
 // Enable CORS for all routes (Alternative method)
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://abcelectonics-43364e8a49cb.herokuapp.com");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  
   next();
 });
 
