@@ -23,8 +23,19 @@ app.use(express.json());
 // Use cookie parser middleware
 app.use(cookieParser());
 
-// Use CORS middleware
-
+const allowedOrigins = ['https://abcelectronics-43364e8a49cb.herokuapp.com', 'http://localhost:5000'];
+app.use(cors({
+  origin: (origin, callback) => {
+  
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true); // Allow the request
+    } else {
+      callback(new Error('Not allowed by CORS')); // Block the request
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers in requests
+}));
 
 // Enable CORS for all routes (Alternative method)
 app.use((req, res, next) => {
