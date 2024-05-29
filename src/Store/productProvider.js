@@ -27,8 +27,8 @@ const ProductProvider= (props)=>{
   const fetchallproducts= async()=>{
     console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
     try {
-      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/`);
-      if (!res.ok) {  // Check if response is not OK (not in the range 200-299)
+      const res = await fetch("https://abcelctonics-3.onrender.com/products/");
+      if (!res.ok) {  
         throw new Error(`HTTP error! status: ${res.status}`);
       }
       const response = await res.json();
