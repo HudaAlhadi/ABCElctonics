@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 
-import cookieParser from 'cookie-parser';
+
 import route from './controllers/user.js';
 import productRoute from './Routes/product.js';
 import orderRoute from './Routes/order.js';
@@ -21,7 +21,7 @@ const app = express();
 app.use(express.json());
 
 // Use cookie parser middleware
-app.use(cookieParser());
+
 
 // CORS configuration
 const allowedOrigins = ['https://abcelectonics-43364e8a49cb.herokuapp.com', 'http://localhost:3000'];
