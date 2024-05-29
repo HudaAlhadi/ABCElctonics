@@ -24,12 +24,11 @@ app.use(express.json());
 
 
 // CORS configuration
-app.use(cors({
-  origin: 'https://abcelctonics-2.onrender.com', 
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-}));
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://abcelctonics-2.onrender.com');
+  next();
+});
 // MongoDB connection
 mongoose.connect('mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce', {
   useNewUrlParser: true,
