@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import Stripe from 'stripe';
+
 import cookieParser from 'cookie-parser';
 import route from './controllers/user.js';
 import productRoute from './Routes/product.js';
@@ -12,7 +12,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Initialize Stripe with the secret key from environment variable
-const stripe = new Stripe(process.env.STRIPE_KEY);
+
 
 // Initialize Express app
 const app = express();
