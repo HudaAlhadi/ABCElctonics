@@ -8,25 +8,17 @@ import productRoute from './Routes/product.js';
 import orderRoute from './Routes/order.js';
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
+
 dotenv.config();
 
-// Initialize Stripe with the secret key from environment variable
 
 
-// Initialize Express app
 const app = express();
 
-// Body parser middleware (included in Express)
 app.use(express.json());
 
-// Use cookie parser middleware
-
-
-// CORS configuration
-
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://abcelctonics-2.onrender.com');
+  res.header('Access-Control-Allow-Origin', '*');
   next();
 });
 // MongoDB connection
