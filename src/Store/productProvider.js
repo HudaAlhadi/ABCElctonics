@@ -25,7 +25,7 @@ const ProductProvider= (props)=>{
 
 
   const fetchallproducts= async()=>{
-    console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+    console.log("Backend URL:", "https://abcelctonics-3.onrender.com/products/");
     try {
       const res = await fetch("https://abcelctonics-3.onrender.com/products/");
       if (!res.ok) {  
