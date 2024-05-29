@@ -24,19 +24,16 @@ app.use(express.json());
 
 
 // CORS configuration
-const allowedOrigins = ['https://abcelectonics-43364e8a49cb.herokuapp.com', 'http://localhost:3000'];
-app.use((req, res, next) => {
+app.use(cors({
+  origin: 'https://abcelctonics-2.onrender.com', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
 
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  return next();
-});
 // MongoDB connection
 mongoose.connect('mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce', {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: true, 
 })
 .then(() => console.log('MongoDB connected...'))
 .catch(err => console.error('MongoDB connection error:', err));
