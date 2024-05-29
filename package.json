@@ -41,7 +41,8 @@
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "backend": "node server/index.js" 
   },
   "eslintConfig": {
     "extends": [
