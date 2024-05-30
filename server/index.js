@@ -17,10 +17,12 @@ const app = express();
 
 app.use(express.json());
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
+const corsOptions = {
+  origin: 'https://abcelctonics-front.onrender.com/', // Replace with your frontend URL
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 // MongoDB connection
 mongoose.connect('mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce', {
   useNewUrlParser: true,

@@ -25,9 +25,9 @@ const ProductProvider= (props)=>{
 
 
   const fetchallproducts= async()=>{
-    console.log("Backend URL:", "https://abcelctonics-3.onrender.com/products/");
+    console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
     try {
-      const res = await fetch("https://abcelctonics-3.onrender.com/products/");
+      const res = await fetch(process.env.REACT_APP_BACKEND_URL);
       if (!res.ok) {  
         throw new Error(`HTTP error! status: ${res.status}`);
       }
