@@ -28,12 +28,15 @@ const ProductProvider= (props)=>{
     console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
     try {
       const res = await fetch(process.env.REACT_APP_BACKEND_URL);
+    
       if (!res.ok) {  
         throw new Error(`HTTP error! status: ${res.status}`);
       }
       const response = await res.json();
+      console.log(response)
       dispatch({type: 'AllProductrequest', payload: response});
     } catch (error) {
+      
       console.log('Fetch error: ', error);
     }}
 
