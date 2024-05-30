@@ -25,12 +25,10 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 // MongoDB connection
-mongoose.connect('mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce', {
- 
-})
-.then(() => console.log('MongoDB connected...'))
-.catch(err => console.error('MongoDB connection error:', err));
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce')
+  .then(() => console.log('MongoDB connected...'))
+  .catch(err => console.error('MongoDB connection error:', err));
 // Routes
 app.use('/orders', orderRoute);
 app.use('/user', route);
