@@ -36,7 +36,7 @@ const ProductProvider= (props)=>{
       console.log(response)
       dispatch({type: 'AllProductrequest', payload: response});
     } catch (error) {
-      
+      console.log('dhdhdhdhdhdhdh')
       console.log('Fetch error: ', error);
     }}
 
