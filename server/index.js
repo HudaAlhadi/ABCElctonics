@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-
-
+import { dataOverallStat } from './data/overallstats.js';
+import { OverallStat } from './Models/overallstats.js';
 import route from './controllers/user.js';
 import productRoute from './Routes/product.js';
 import orderRoute from './Routes/order.js';
@@ -17,13 +17,12 @@ const app = express();
 
 app.use(express.json());
 
-const corsOptions = {
-  origin: 'https://abcelctonics-front.onrender.com', 
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204
-};
-app.use(cors(corsOptions));
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  next();
+});
+app.use(cors());
 // MongoDB connection
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://hudaalhadi:elc.eng18@ecommerce.a0l0yl8.mongodb.net/ecommerce')
@@ -33,6 +32,15 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://hudaalhadi:elc.eng18@
 app.use('/orders', orderRoute);
 app.use('/user', route);
 app.use('/products', productRoute);
+  
+const insertstats=async ()=>{
+  try{ 
+await OverallStat.insertMany(dataOverallStat)
+console.log("stats insereted")}
+catch(err){
+  console.log(err )
+}
+}
 
 // Start the server
 const port = process.env.PORT || 10000;

@@ -49,12 +49,11 @@ console.log(isloading)
   const HideModal = () => {
     setshowstate(false);
   };
-
-  return (
+  return ( 
     <Router>
 <UserProvider> 
       <AuthProvider>
-      <FavProvider>
+      <FavProvider>     
         <CartProvider>
         <ProductProvider> 
         <OrderProvider> 

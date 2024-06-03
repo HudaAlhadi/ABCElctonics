@@ -68,9 +68,10 @@ useEffect(() => {
    
       <header  className={classes.header}>
      <div className={classes.logocontainer}> 
-        <img  src={cart}/>
+     <Link to='/'> <img  src={cart}/></Link>
          
-        <h1>AbcElectonics</h1></div>
+        <Link to='/'> <h1>AbcElectonics</h1></Link>
+        </div>
         <div className={classes.container}>
         
          {Isshow? <nav className={classes.OverlayMenu}>
@@ -100,7 +101,7 @@ useEffect(() => {
           </div>
             <div className={classes.accountContainer}>
             <div className={classes.cart}>
-            <HeaderCartButton onClick={props.onShow} />
+            <HeaderCartButton   onClick={props.onShow} />
             <Link to='/favorite'>
               <FaRegHeart className={classes.account} />
             </Link> </div>
@@ -120,7 +121,7 @@ useEffect(() => {
             )}
             <MdAccountCircle className={classes.accountIcon} />
        
-         <GiHamburgerMenu  onClick={(e)=>{     e.stopPropagation() ; setshowstate(true)}} className={classes.hamIcon}/>
+         <GiHamburgerMenu  onClick={(e)=>{e.stopPropagation() ; setshowstate(true)}} className={classes.hamIcon}/>
           </div>
         </div>
       </header>

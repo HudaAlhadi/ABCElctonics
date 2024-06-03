@@ -7,7 +7,7 @@
     justify-content: space-between;
     color: white;
     padding: 0.75rem 2rem;
-
+    line-height: 1;
     align-items: center;
     border-radius: 25px;
     font-weight: bold;
@@ -82,6 +82,8 @@
     
     
 }
+
+
 .icon{
     
     margin-right: 0rem;
@@ -94,7 +96,7 @@ position: absolute;
 background-color: #b94517;
 padding:0.2rem 0.5rem;
     top: 3px; 
-    right: 25px;
+    right: 26px;
     color: white; /* Text color of the badge */
     border-radius: 50%;
     margin-left: 0rem;
@@ -121,6 +123,11 @@ padding:0.2rem 0.5rem;
      
      
  }
+ .button:hover,
+.button:active {
+    background-color: transparent
+}
+
  .icon{
      width: 2rem;
      height: 1.8rem;

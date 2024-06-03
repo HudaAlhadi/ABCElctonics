@@ -28,7 +28,7 @@ const orderreducer = (state, action) => {
     
       return {
         ...state,
-       orders: action.payload.ordersDoc,
+       orders: action.payload,
         loading: false
 
         
@@ -42,16 +42,7 @@ const orderreducer = (state, action) => {
         orders: order
       }
 
-      case 'my_orders_request':
-        return {
-          orders: action.payload.ordersDoc,
-          ...state
-        }
-    default:
-      return state;
-   
-  }
-  
+    }
 };
 
   const OrderProvider = (props) => {
@@ -64,9 +55,9 @@ const orderreducer = (state, action) => {
             const res= await fetch(`${process.env.REACT_APP_BACKEND_URL}/orders`)
         
             const response= await res.json()
-        
-            dispatch({type: 'All_orders_request', payload: response})
-            console.log(response)
+       const {orders}=response
+            dispatch({type: 'All_orders_request', payload: orders})
+     
             return response
              
         } catch(error){

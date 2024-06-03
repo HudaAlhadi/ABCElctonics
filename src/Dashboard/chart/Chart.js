@@ -19,7 +19,7 @@ const Chart = () => {
 useEffect(()=>{
   fetchproducts()
 },[])
-
+console.log(products)
 const stats = products.map(({ stats }) => {
 
   return stats?.monthlyData;
@@ -34,7 +34,7 @@ const stats = products.map(({ stats }) => {
 
   <h2 className="sales"> Total sales</h2>
         <AreaChart
-          width={500}
+          width={400}
           height={250}
            data={stats[0]}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

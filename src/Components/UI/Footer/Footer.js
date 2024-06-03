@@ -50,7 +50,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className={classes.btncontainer}>  <button className={classes.touch}> Get In touch</button> 
+                <div className={classes.btncontainer}> <Link to='/contact'><button className={classes.touch}> Get In touch</button> </Link> 
                 <div > <h3> Follow us</h3>
                 <FaFacebook  className={classes.social} /> <FaTwitter className={classes.social} /> <IoLogoInstagram className={classes.social} /> <FaYoutube className={classes.social} /> </div></div>
             </footer >

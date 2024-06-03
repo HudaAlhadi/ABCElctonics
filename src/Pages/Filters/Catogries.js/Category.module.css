@@ -65,7 +65,6 @@
 margin-left: 5rem;
 margin-bottom: 1rem;
 
-
 }
 .shopping span{
     color: white;
@@ -160,7 +159,12 @@ background-color: rgb(220, 175, 116);
 
 
   }
+  .shopping img{
+
+  height:250px;
+
   
+    }
 .wrapper button{
   padding: 1rem 2rem;
 
@@ -175,11 +179,13 @@ background-color: rgb(220, 175, 116);
       margin: 0 auto;
 
   }
+
 .shopping h1{
   margin-left: 1rem;
   font-size: 20px;
 }
 .shopping span{
-  font-size: 90px;
+  font-size: 70px;
+
 }
 }

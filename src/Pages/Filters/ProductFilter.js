@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
-import './filter.module.css'
+import './filter.module.css';
+
 const ProductFilter = (props) => {
-  const { products } = props;
+  const { products, onFilter } = props;
   const [sortOption, setSortOption] = useState('nameLowToHigh'); 
 
   const filterProducts = (sortOption) => {
-    // Sorting
-    const sortedProducts = [...products];
+    const sortedProducts = [...products];  // Create a new array to avoid mutating original array
     if (sortOption === 'nameLowToHigh') {
-      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+      sortedProducts.sort((a, b) => a.product.name.localeCompare(b.product.name));
     } else if (sortOption === 'nameHighToLow') {
-      sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+      sortedProducts.sort((a, b) => b.product.name.localeCompare(a.product.name));
     } else if (sortOption === 'priceLowToHigh') {
-      sortedProducts.sort((a, b) => a.price - b.price);
+      sortedProducts.sort((a, b) => a.product.price - b.product.price);
     } else if (sortOption === 'priceHighToLow') {
-      sortedProducts.sort((a, b) => b.price - a.price);
+      sortedProducts.sort((a, b) => b.product.price - a.product.price);
     }
-
     return sortedProducts;
   };
 
@@ -24,8 +23,7 @@ const ProductFilter = (props) => {
     const selectedSortOption = event.target.value;
     setSortOption(selectedSortOption);
     const filteredProducts = filterProducts(selectedSortOption);
-    
-    props.onFilter(filteredProducts)
+    onFilter(filteredProducts);
   };
 
   return (

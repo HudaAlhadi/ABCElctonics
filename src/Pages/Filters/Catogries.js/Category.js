@@ -13,60 +13,51 @@ import Talktous from '../../../Components/UI/Card/Talktous.js';
 import Loading from '../../../Components/UI/Card/Loading.js';
 
 
+
 function Categories(props) {
   const { products, fetchproducts, isloading } = useContext(ProductContext);
-  const [productlist, setProduct] = useState(products);
-  // Memoize the products value
+  const [productlist, setProduct] = useState([]);
+  const [sortedProducts, setSortedProducts] = useState([]);
+  
   const fetchProductsCallback = useCallback(fetchproducts, []);
 
   useEffect(() => {
-
     fetchProductsCallback();
   }, [fetchProductsCallback]);
 
   useEffect(() => {
     setProduct(products);
+    setSortedProducts(products);  
   }, [products]);
 
-
-
-  const handlefilter = (e) => {
+  const handleFilter = (e) => {
     const selectedCategory = e.target.value;
-
-  
-    const filteredItems = products.filter((item) => {
- 
-      return selectedCategory === 'All'  || item.product.category === selectedCategory
-    });
-    console.log(filteredItems)
-    setProduct(filteredItems);
+    const filteredItems = products.filter((item) => selectedCategory === 'All' || item.product.category === selectedCategory);
+    setSortedProducts(filteredItems);
   };
 
-  const allproducts = productlist?.map((item) => {
-    return (
-      <ProductItem
-        key={item.product._id} 
-        category={item.product.category}
-        id={item.product._id}
-        title={item.product.name}
-        price={item.product.price}
-        desc={item.product.description}
-        img={item.product.images[0].url}
-        rating={item.product.ratings}
-        reviews={item.product.numOfReviews}
-        saleCoubt={item.product.saleCount}
-      />
-    );
-  });
-
-  const updateFilteredProducts = (filteredProducts) => {
-    setProduct(filteredProducts);
+  const handleSort = (sortedProducts) => {
+    setSortedProducts([...sortedProducts]);
   };
+
+  const allproducts = sortedProducts.map((item) => (
+    <ProductItem
+      key={item.product._id}
+      category={item.product.category}
+      id={item.product._id}
+      title={item.product.name}
+      price={item.product.price}
+      desc={item.product.description}
+      img={item.product.images[0].url}
+      rating={item.product.ratings}
+      reviews={item.product.numOfReviews}
+      saleCoubt={item.product.saleCount}
+    />
+  ));
 
   return (
     <>
-    {isloading&&<Loading></Loading>}
-    
+      {isloading && <Loading />}
       <div className={classes.shopping}>
         <h1>
           Summer <br />
@@ -75,59 +66,59 @@ function Categories(props) {
           </span>
           <br /> Fine Up to 50% discount
         </h1>
-        
-        <img src={shopping} />
+        <img src={shopping} alt="shopping" />
       </div>
       <div className={classes.wrapper}>
-    <div className={classes.categories}> 
- 
-          <button className={classes.all} onClick={handlefilter} value={'All'}>
-          <span>
+        <div className={classes.categories}>
+          <button className={classes.all} onClick={handleFilter} value={'All'}>
+            <span>
               <IoWomanOutline />
             </span>
             All
           </button>
-          <button className={classes.women} onClick={handlefilter} value={"Audio"}>
+          <button className={classes.women} onClick={handleFilter} value={"Audio"}>
             <span>
               <IoWomanOutline />
             </span>
-           Audio
+            Audio
           </button>
-          <button className={classes.men} onClick={handlefilter} value={"Electronics"}>
+          <button className={classes.men} onClick={handleFilter} value={"Electronics"}>
             <span>
               <GiClothes />
             </span>
             Electronics
           </button>
-          <button className={classes.electronics} onClick={handlefilter} value={'Accessories'}>
+          <button className={classes.electronics} onClick={handleFilter} value={'Accessories'}>
             <span>
               <FaCamera />
             </span>
             Accessories
           </button>
-          <button className={classes.jewelery} onClick={handlefilter} value={'Cameras'}>
+          <button className={classes.jewelery} onClick={handleFilter} value={'Cameras'}>
             <span>
               <GiPowerRing />
             </span>
             Cameras
           </button>
-          <button className={classes.jewelery} onClick={handlefilter} value={'Laptops'}>
+          <button className={classes.jewelery} onClick={handleFilter} value={'Laptops'}>
             <span>
               <GiPowerRing />
             </span>
             Laptops
           </button>
-          </div>
         </div>
-    
+      </div>
       <div className={classes.hero}>
-        <div className={classes.filter}> 
-      <ProductFilter onFilter={updateFilteredProducts} products={products}></ProductFilter></div>
-      
-      <div className={classes.meals}>
-        {allproducts}
-      </div> <Talktous></Talktous></div>
+        <div className={classes.filter}>
+          <ProductFilter onFilter={handleSort} products={productlist} />
+        </div>
+        <div className={classes.meals}>
+          {allproducts}
+        </div>
+        <Talktous />
+      </div>
     </>
   );
 }
+
 export default Categories;

@@ -14,6 +14,7 @@ import Loading from "../../Components/UI/Card/Loading";
 const List = () => {
 const {orders, getorders, isLoading}= useContext(OrderContext)
 
+console.log(orders)
   useEffect(()=>{
     getorders()
   },[])

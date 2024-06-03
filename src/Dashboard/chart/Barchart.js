@@ -35,7 +35,7 @@ const StockChart = () => {
     <div className='barchart'>
       <h2>Stock</h2>
       <BarChart
-        width={500}
+        width={400}
         height={300}
         data={stockData}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}

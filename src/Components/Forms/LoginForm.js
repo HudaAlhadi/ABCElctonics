@@ -4,7 +4,7 @@ import AuthProvider, { AuthContext } from "../../Store/authprovider";
 import { useEffect } from "react";
 import { AiOutlineWarning } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import classes from './RegisterForm.module.css';
+import classes from './loginform.module.css';
 import { RiEyeCloseFill } from "react-icons/ri";
 
 const LoginForm = () => {
@@ -29,7 +29,7 @@ const LoginForm = () => {
 
     return (
         <> 
-            <form>
+            <form >
                 {failedlogin && <p className={classes.warning}><AiOutlineWarning /> Incorrect password or email</p>}
                 <h2>Sign in</h2>
                 <label htmlFor="email">Email Address</label>
@@ -39,7 +39,7 @@ const LoginForm = () => {
                 
                 {!loginState &&
                     <button onClick={handleLogin}><IoIosLock /> Sign in</button> }
-          {!loginState&&  <div> <span>Don't have an account?</span> <Link to='/user/register'><span className={classes.sign}> Sign up
+          {!loginState&&  <div> <span>Don't have an account?</span><Link to='/user/register'><span className={classes.sign}>Sign up
            </span> </Link></div> }
             </form>
         </>

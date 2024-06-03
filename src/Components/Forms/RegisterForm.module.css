@@ -16,12 +16,13 @@ form {
 }
 
 form .input {
-    background-color: #ccc;
+   
     padding: 10px;
     border-radius: 4px;
     box-sizing: border-box;
-    width: calc(50% - 20px);
-    margin-bottom: 1rem; 
+    width: 70%
+  
+
 }
 
 form button {
@@ -55,3 +56,17 @@ form button {
     color: blue;
     border-bottom: 1px solid;
 }
+
+@media (max-width: 460px) {
+
+    form .input{
+
+        width: 100%
+    }
+    .buttons button{
+       
+        min-width: 120px;
+        padding: 0.5rem 1rem;
+    
+    }
+  }

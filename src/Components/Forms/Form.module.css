@@ -124,7 +124,7 @@ display: grid;
 
 
 
-@media (max-width: 640px) {
+@media (max-width: 740px) {
 
     .form{
      gap: 2rem;
@@ -142,4 +142,5 @@ font-size: 20px;
    .form h1{
     font-size: 20px;
     }
+
   }

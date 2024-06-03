@@ -74,6 +74,25 @@ h3{
 }
 @media (max-width: 1400px) {
     .Chart {
+
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    }
+    .section{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+
+    }
+    .product{
+        padding: 0.1rem 2rem;
+    }
+}
+@media (max-width: 500px) {
+    .Chart {
+        
+ 
+
    
 flex-direction: column;
 justify-content: center;
