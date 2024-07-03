@@ -48,6 +48,23 @@ A default admin account is created during the initial setup. You can use the fol
         password: '525524',
         email: 'user1@example.com',
 
+
+## Design
+Below are some design mockups created in Figma for both desktop and mobile:
+
+(https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/3275f365-300d-4d86-a6c6-3c97bf0c54ed) 
+![iPhone 14   15 Pro Max - 7](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/18cc2854-17f2-41f8-af7e-ff41816c616c)
+
+![Desktop - 3](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/68eae456-5ba7-48c6-9c3a-fe4c1009985f)
+![iPhone 14   15 Pro Max - 3](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/554c1ab3-b446-4993-bd02-5e052046f0c3)
+
+![Desktop - 6](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/d3c7cfa7-ccde-4021-9acf-d8042efee6c3)
+
+![iPhone 14   15 Pro Max - 8](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/d89401e6-aea8-40b1-816e-480b96249bd4)
+![Desktop - 10](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/ac583cee-fd0c-4756-9b6c-a0df250ccd59)
+
+![iPhone 14   15 Pro Max - 10](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/e27cea3c-8b40-4f1b-80b9-724fafff64a7)
+
 # Course Code & Materials
 
 This repository contains the course source code and other extra materials like slides.
