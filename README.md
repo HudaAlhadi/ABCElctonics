@@ -1,7 +1,7 @@
 ABCElectronics
 ABCElectronics is a modern, full-featured e-commerce application designed to provide a seamless shopping experience for electronics enthusiasts. Built using JavaScript, HTML, CSS, Node.js, Express, and Redux Toolkit, this application offers robust functionalities for both customers and administrators.
 
-Features
+## Features
 Customer Features
 Product Browsing: Users can easily browse through a wide range of electronic products, view detailed descriptions, and see high-quality images.
 Search and Filter: Advanced search and filtering options help users find exactly what they're looking for quickly.
@@ -9,7 +9,8 @@ Shopping Cart: Customers can add products to their cart, update quantities, and 
 User Authentication: Secure user authentication allows customers to register, log in, and manage their profiles.
 Order Management: Users can view their order history, track current orders, and receive notifications about order status.
 Responsive Design: The application is fully responsive, providing a great user experience on both desktop and mobile devices.
-Admin Features
+
+## Admin Features
 Admin Dashboard: A comprehensive admin dashboard for managing products, orders, and users.
 Product Management: Admins can add new products, update existing products, and remove products from the catalog.
 Order Management: View, update, and manage all customer orders.
@@ -41,8 +42,7 @@ State Management:
 Utilized Redux Toolkit to manage global state, ensuring consistent and predictable state transitions across the application.
 GitHub Repository
 
-
-*****Admin Dashboard
+## Admin Dashboard
 To access the admin dashboard, you need to log in with admin credentials.
 A default admin account is created during the initial setup. You can use the following credentials to log in:
         password: '525524',
@@ -64,6 +64,11 @@ Below are some wireframes created in Figma for both desktop and mobile:
 ![Desktop - 10](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/ac583cee-fd0c-4756-9b6c-a0df250ccd59)
 
 ![iPhone 14   15 Pro Max - 10](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/e27cea3c-8b40-4f1b-80b9-724fafff64a7)
+
+## Live Demo
+A live demo of the project is hosted on Vercel. Please note that due to the limitations of the free tier, it may take up to a minute to connect to the backend initially. This delay is caused by the server being in a cold start state, which is common with free hosting services.
+
+[[Live Demo on Vercel](https://abc-elctonics.vercel.app/)
 
 # Course Code & Materials
 
