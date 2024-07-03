@@ -42,6 +42,12 @@ Utilized Redux Toolkit to manage global state, ensuring consistent and predictab
 GitHub Repository
 
 
+*****Admin Dashboard
+To access the admin dashboard, you need to log in with admin credentials.
+A default admin account is created during the initial setup. You can use the following credentials to log in:
+        password: '525524',
+        email: 'user1@example.com',
+
 # Course Code & Materials
 
 This repository contains the course source code and other extra materials like slides.
