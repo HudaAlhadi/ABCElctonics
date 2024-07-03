@@ -50,7 +50,7 @@ A default admin account is created during the initial setup. You can use the fol
 
 
 ## Design
-Below are some design mockups created in Figma for both desktop and mobile:
+Below are some wireframes created in Figma for both desktop and mobile:
 
 (https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/3275f365-300d-4d86-a6c6-3c97bf0c54ed) 
 ![iPhone 14   15 Pro Max - 7](https://github.com/HudaAlhadi/ABCElctonics/assets/139655754/18cc2854-17f2-41f8-af7e-ff41816c616c)
